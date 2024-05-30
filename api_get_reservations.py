@@ -15,9 +15,10 @@ fromdate = str(date.today())
 # fromdate = "2024-04-30"
 todate = str(calculate_future_date())
 # todate = "2024-06-1"
-
+#Api_token
+api_token = "apitoken"
 # Construct the URL with query parameters
-url = "https://api.nobeds.com/api/Bookings/jVkw6rmAHblkwaqtued0?fromdate=" + fromdate +"&todate=" + todate
+url = "https://api.nobeds.com/api/Bookings/"+api_token+"?fromdate=" + fromdate +"&todate=" + todate
 
 # Make the request using the scraper
 response = scraper.get(url, headers={"accept": "application/json"})
