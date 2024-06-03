@@ -56,30 +56,27 @@ for booking in data:
     #roomid= booking.get("room_id")
     room = get_room_name(booking.get("room_id"))
 
-
+# Check the status before creating the booking details dictionary
+    if status != "Cancelled":
 # Create a dictionary for each booking with extracted data
-    booking_details = {
-        "Room": room,
-        "checkin": checkin,
-        "checkout": checkout,
-        "nights": nights,
-        "name": name,
-        "guests": guests,
-        "children": children,
-        "email": email,
-        "phone": phone,
-        "country": country,
-        "status": status,
-        "referral": referral,
-        "services": services,
-        "price": price,
-        "total": total,
-        "comment": comment,
-        
-        
-        
-        
-    }
+        booking_details = {
+            "Room": room,
+            "checkin": checkin,
+            "checkout": checkout,
+            "nights": nights,
+            "name": name,
+            "guests": guests,
+            "children": children,
+            "email": email,
+            "phone": phone,
+            "country": country,
+            "status": status,
+            "referral": referral,
+            "services": services,
+            "price": price,
+            "total": total,
+            "comment": comment,
+        }
 
 # Append the booking details dictionary to the list
     booking_info.append(booking_details)
