@@ -79,7 +79,7 @@ for booking in data:
         }
 
 # Append the booking details dictionary to the list
-    booking_info.append(booking_details)
+        booking_info.append(booking_details)
 
 #print(df.to_html())
 # print(json.dumps(booking_info, indent=4))
